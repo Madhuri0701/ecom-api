@@ -3,6 +3,7 @@ const mongoose = require('mongoose')
 const userRoute = require('./Route/userRoute')
 const productRoute = require('./Route/productRoute')
 const cartRoute = require('./Route/cartRoute')
+const billingRoute =require('./Route/billingRoute')
 const cors = require('cors')
 require('dotenv/config')
 
@@ -21,6 +22,7 @@ res.send('home')
 app.use('/api/user',userRoute)
 app.use('/api/product',productRoute)
 app.use('/api/cart',cartRoute)
+app.use('/api/bolling',billingRoute)
 app.listen(process.env.PORT || 5000)
 
 async function main() {
